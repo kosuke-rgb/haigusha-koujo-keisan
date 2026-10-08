@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>配偶者控除・配偶者特別控除 計算ツール【令和8年分】年収から控除額と申告書の区分が分かる</title>
+<meta name="description" content="夫・妻それぞれの年収を入れるだけで、令和8年分の配偶者控除・配偶者特別控除の額と、年末調整の配偶者控除等申告書に書く区分Ⅰ（A〜C）・区分Ⅱ（①〜④）が分かる無料ツール。配偶者の年収136万円・169万円・207万円の新しい基準に対応。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://webtools-labs.com/haigusha-koujo-keisan/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2370765779014113" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NKK5TXCQEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NKK5TXCQEK');
+</script>
+<script>
+(function () {
+  var fired = false;
+  function fireOnce() {
+    if (fired) return;
+    fired = true;
+    if (typeof gtag === 'function') gtag('event', 'tool_used', { tool_name: document.title });
+  }
+  document.addEventListener('input', fireOnce, true);
+  document.addEventListener('change', fireOnce, true);
+})();
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif'%3E%EF%BF%A5%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="webtools-labs">
+<meta property="og:title" content="配偶者控除・配偶者特別控除 計算ツール【令和8年分】">
+<meta property="og:description" content="夫・妻の年収を入れるだけで、配偶者控除・配偶者特別控除の額と申告書の区分が分かります。">
+<meta property="og:url" content="https://webtools-labs.com/haigusha-koujo-keisan/">
+<meta property="og:image" content="https://webtools-labs.com/haigusha-koujo-keisan/og-image.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="配偶者控除・配偶者特別控除 計算ツール【令和8年分】">
+<meta name="twitter:description" content="年末調整の配偶者控除等申告書に書く区分と控除額を、年収から計算できる無料ツール。">
+<meta name="twitter:image" content="https://webtools-labs.com/haigusha-koujo-keisan/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "配偶者控除・配偶者特別控除 計算ツール",
+  "url": "https://webtools-labs.com/haigusha-koujo-keisan/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "本人と配偶者の年収から、令和8年分の配偶者控除・配偶者特別控除の額と、配偶者控除等申告書の区分Ⅰ・区分Ⅱを判定する無料ツール。",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "配偶者控除と配偶者特別控除の違いは何ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "配偶者の合計所得金額が62万円以下（給与収入だけなら年収136万円以下）なら「配偶者控除」、62万円超133万円以下（年収207万円以下）なら「配偶者特別控除」です。令和8年分は、配偶者控除の基準が48万円（年収123万円）から62万円（年収136万円）に引き上げられました。配偶者の年収が169万円以下なら、どちらでも控除額は最大の38万円です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "区分Ⅰと区分Ⅱには何を書けばいいですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "区分Ⅰは「あなた（本人）」の合計所得金額の見積額で決まり、900万円以下ならA、950万円以下ならB、1,000万円以下ならCです（基礎控除申告書の欄に書きます）。区分Ⅱは「配偶者」の合計所得金額と年齢で決まり、62万円以下で70歳以上なら①、70歳未満なら②、62万円超95万円以下なら③、95万円超133万円以下なら④です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "本人の年収がいくらを超えると受けられなくなりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "本人の合計所得金額が1,000万円を超えると、配偶者控除も配偶者特別控除も受けられません。給与収入だけなら、年収およそ1,195万円が境目です（23歳未満の扶養親族がいるなど所得金額調整控除がある場合は少し高くなります）。" }
+    },
+    {
+      "@type": "Question",
+      "name": "配偶者の年収はいつの金額で判定しますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "その年（令和8年分なら2026年1〜12月）に受け取る給与の総額の見込みで判定します。年末調整の時点ではまだ確定していないため、12月分までの見込み額を書きます。見込みと実際の金額が違って区分が変わった場合は、年末調整のやり直しか確定申告で修正します。" }
+    },
+    {
+      "@type": "Question",
+      "name": "共働きでお互いに配偶者特別控除を受けられますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "受けられません。夫婦の双方が、お互いに配偶者特別控除を受けることはできません。どちらか一方だけが受けられます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "社会保険の扶養（130万円の壁）とは関係ありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "別の制度です。配偶者控除・配偶者特別控除は税金（所得税・住民税）の控除で、社会保険の扶養（健康保険・年金）は原則として年収130万円未満かどうかで判定されます。年収130万円を超えると社会保険料の負担が発生するため、税金の控除だけでなく社会保険の扶養もあわせて確認してください。" }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://webtools-labs.com/" },
+    { "@type": "ListItem", "position": 2, "name": "配偶者控除・配偶者特別控除 計算ツール" }
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #ffffff;
+  --surface-2: #f7f7f7;
+  --ink: #1a1a1a;
+  --muted: #767676;
+  --line: #e3e3e3;
+  --accent: #0f766e;
+  --best-bg: #f0f8f6;
+  --warn-bg: #fff7ed;
+  --warn-ink: #9a5b00;
+  --bad-bg: #fef2f2;
+  --bad-ink: #b91c1c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+header.masthead { margin-bottom: 1.5rem; }
+h1 {
+  font-weight: 700;
+  font-size: clamp(1.4rem, 4.5vw, 1.7rem);
+  margin: 0 0 0.7rem;
+  letter-spacing: 0.01em;
+}
+p.lede { color: var(--muted); margin: 0; max-width: 60ch; font-size: 0.95rem; }
+.updated-note { display: block; margin-top: 0.9rem; font-size: 0.78rem; color: var(--muted); }
+
+.notice-box {
+  background: var(--warn-bg); color: var(--warn-ink); border-radius: 8px;
+  padding: 0.9rem 1.1rem; font-size: 0.85rem; margin-bottom: 2rem;
+}
+
+section { margin-bottom: 2.5rem; }
+h2 { font-size: 1.05rem; font-weight: 700; margin: 0 0 1rem; }
+
+.field-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; }
+.field { flex: 1; min-width: 160px; }
+.field label { display: block; font-size: 0.83rem; color: var(--muted); margin-bottom: 0.35rem; }
+.check-row { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; margin: 0 0 1.25rem; }
+.check-row input { width: 1.1rem; height: 1.1rem; margin-top: 0.25rem; accent-color: var(--accent); }
+.field-group { font-size: 0.85rem; font-weight: 700; margin: 0.4rem 0 0.5rem; }
+.sym { display: inline-block; min-width: 1.6rem; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.form-section { font-weight: 700; background: var(--bg-soft, rgba(15,118,110,0.06)); }
+table.compare.form-table th:nth-child(2), table.compare.form-table td:nth-child(2) { text-align: left; }
+table.compare.form-table td.num { white-space: nowrap; }
+.field input[type="number"], .field select {
+  width: 100%; font-variant-numeric: tabular-nums; font-size: 1.05rem; font-family: inherit;
+  padding: 0.55rem 0.7rem; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--bg); color: var(--ink);
+}
+.field input:focus, .field select:focus { outline: none; border-color: var(--accent); }
+
+.status-box { border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 1.25rem; font-size: 0.92rem; }
+.status-box.ok { background: var(--best-bg); color: var(--ink); }
+.status-box.bad { background: var(--bad-bg); color: var(--bad-ink); }
+.status-box strong { font-size: 1.1rem; }
+
+.summary-cards { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+.summary-card {
+  flex: 1; min-width: 180px; background: var(--surface-2); border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+.summary-card .label { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.3rem; }
+.summary-card .value { font-size: 1.4rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.summary-card .sub { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+
+table.compare { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+table.compare th, table.compare td {
+  padding: 0.55rem 0.5rem; text-align: right; border-bottom: 1px solid var(--line); vertical-align: top;
+}
+table.compare th:first-child, table.compare td:first-child { text-align: left; }
+table.compare thead th { color: var(--muted); font-weight: 500; font-size: 0.78rem; }
+table.compare td.num { font-variant-numeric: tabular-nums; }
+tr.total td { font-weight: 700; }
+tr.total { background: var(--best-bg); }
+
+.ref-table { overflow-x: auto; }
+.ref-table table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 460px; }
+.ref-table th, .ref-table td { padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--line); text-align: left; }
+.ref-table td.num { font-variant-numeric: tabular-nums; text-align: right; }
+.ref-table tr.highlight td { background: var(--best-bg); font-weight: 700; }
+.ref-table-scroll { max-height: 420px; overflow-y: auto; }
+
+.disclaimer { font-size: 0.78rem; color: var(--muted); margin-top: 1rem; }
+
+.share-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.1rem; }
+.share-btn {
+  display: inline-flex; align-items: center; padding: 0.5rem 1rem; border-radius: 999px;
+  color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 700;
+}
+.share-btn:hover { opacity: 0.85; }
+.share-x { background: #000; }
+.share-line { background: #06c755; }
+.share-fb { background: #1877f2; }
+.share-hatena { background: #00a4de; }
+
+.ad-slot { margin: 2.5rem 0; text-align: center; min-height: 100px; }
+
+.pr-box {
+  border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px;
+  padding: 1.2rem 1.3rem; margin: 2.5rem 0; background: var(--best-bg);
+}
+.pr-box .pr-label {
+  display: inline-flex; align-items: center; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em;
+  color: #fff; background: var(--accent); border-radius: 999px;
+  padding: 0.2rem 0.7rem; margin-bottom: 0.8rem;
+}
+.pr-box p.pr-lede { color: var(--ink); font-size: 0.92rem; margin: 0 0 1rem; max-width: none; line-height: 1.7; }
+.pr-box .pr-banner { text-align: center; }
+.pr-box .pr-banner img { max-width: 100%; height: auto; }  /* 広告バナー（幅320px）がスマホで画面からはみ出さないように */
+.pr-box .pr-cta {
+  display: inline-block; background: var(--accent); color: #fff; font-weight: 700;
+  font-size: 0.85rem; padding: 0.6rem 1.3rem; border-radius: 999px; text-decoration: none;
+}
+.pr-box .pr-cta:hover { opacity: 0.85; }
+
+.contact-box textarea {
+  width: 100%; min-height: 6rem; font-family: inherit; font-size: 0.92rem;
+  padding: 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink);
+  resize: vertical; margin-bottom: 0.6rem;
+}
+.contact-box input[type="email"] {
+  width: 100%; font-family: inherit; font-size: 0.92rem;
+  padding: 0.6rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+.contact-box textarea:focus, .contact-box input:focus { outline: none; border-color: var(--accent); }
+.contact-box button {
+  font-family: inherit; font-weight: 700; font-size: 0.9rem; padding: 0.6rem 1.4rem;
+  border: none; border-radius: 6px; background: var(--accent); color: #fff; cursor: pointer;
+}
+.contact-box button:disabled { opacity: 0.5; cursor: not-allowed; }
+.contact-status { font-size: 0.85rem; margin-top: 0.6rem; }
+.contact-status.ok { color: var(--accent); }
+.contact-status.err { color: #b91c1c; }
+
+footer.site-footer {
+  margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line);
+  font-size: 0.78rem; color: var(--muted);
+}
+footer.site-footer p { margin: 0 0 0.5rem; }
+footer.site-footer a { color: var(--accent); }
+
+.faq-item { border-bottom: 1px solid var(--line); padding: 0.9rem 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item summary {
+  cursor: pointer; font-weight: 700; font-size: 0.92rem; list-style: none;
+  position: relative; padding-right: 1.6rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+'; position: absolute; right: 0; top: 0; color: var(--accent); font-weight: 700; font-size: 1.1rem;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.88rem; }
+.breadcrumb { font-size: 0.78rem; color: var(--muted); margin-bottom: 1.1rem; }
+.breadcrumb a { color: var(--accent); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="breadcrumb" aria-label="パンくずリスト"><a href="https://webtools-labs.com/">ホーム</a> / 配偶者控除・配偶者特別控除 計算ツール</nav>
+  <header class="masthead">
+    <h1>配偶者控除・配偶者特別控除 計算ツール【令和8年分】</h1>
+    <p class="lede">あなたと配偶者の年収（給与の見込み額）を入れるだけで、配偶者控除・配偶者特別控除の額と、年末調整で出す「配偶者控除等申告書」に書く区分Ⅰ（A〜C）・区分Ⅱ（①〜④）が分かります。</p>
+    <span class="updated-note">制度 最終確認日: 2026年10月8日（国税庁タックスアンサーNo.1191・No.1195〔令和8年4月1日現在法令等〕、令和8年分の申告書記載例にもとづく）</span>
+    <p class="ad-disclosure" style="font-size:0.75rem;opacity:0.7;margin:0.5rem 0 0;">※当サイトはアフィリエイト広告（PR）を利用しています。</p>
+  </header>
+
+  <div class="notice-box">
+    ⚠️ 令和8年分から、配偶者控除の基準が<strong>配偶者の合計所得金額48万円→62万円</strong>（給与収入だけなら<strong>年収123万円→136万円</strong>）に引き上げられました。配偶者特別控除は合計所得62万円超133万円以下（年収207万円以下）が対象で、配偶者の年収が<strong>169万円以下なら控除額は最大の38万円</strong>です。
+  </div>
+
+  <section>
+    <h2>年収を入力</h2>
+    <p class="field-group">あなた（年末調整を受ける本人）</p>
+    <div class="field-row">
+      <div class="field">
+        <label for="selfSalary">給与の年収（額面・見込み額）</label>
+        <input type="number" id="selfSalary" min="0" step="10000" value="5000000">
+      </div>
+      <div class="field">
+        <label for="selfOther">給与以外の所得（事業・不動産など。なければ0）</label>
+        <input type="number" id="selfOther" min="0" step="10000" value="0">
+      </div>
+    </div>
+    <label class="check-row"><input type="checkbox" id="adjust"><span>年収850万円超で、23歳未満の扶養親族がいる・本人や家族が特別障害者（所得金額調整控除の対象）</span></label>
+    <p class="field-group">配偶者</p>
+    <div class="field-row">
+      <div class="field">
+        <label for="spouseSalary">給与の年収（額面・1〜12月の見込み額）</label>
+        <input type="number" id="spouseSalary" min="0" step="10000" value="1500000">
+      </div>
+      <div class="field">
+        <label for="spouseOther">給与以外の所得（年金・事業など。なければ0）</label>
+        <input type="number" id="spouseOther" min="0" step="10000" value="0">
+      </div>
+    </div>
+    <label class="check-row"><input type="checkbox" id="elderly"><span>配偶者が70歳以上（昭和32年1月1日以前生まれ）</span></label>
+    <div class="field-row">
+      <div class="field">
+        <label for="taxRate">あなたの所得税率（節税額の目安に使います。分からなければ10%）</label>
+        <select id="taxRate">
+          <option value="0.05">5%（課税所得195万円以下）</option>
+          <option value="0.10" selected>10%（195万円超330万円以下）</option>
+          <option value="0.20">20%（330万円超695万円以下）</option>
+          <option value="0.23">23%（695万円超900万円以下）</option>
+          <option value="0.33">33%（900万円超1,800万円以下）</option>
+          <option value="0.40">40%（1,800万円超4,000万円以下）</option>
+          <option value="0.45">45%（4,000万円超）</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="summary-cards" id="summaryCards"></div>
+    <h3 style="font-size:1rem;margin:1.2rem 0 0.4rem;">申告書に書く内容</h3>
+    <div style="overflow-x:auto">
+      <table class="compare form-table">
+        <thead><tr><th>欄</th><th>書く内容</th><th class="num">金額・記号</th></tr></thead>
+        <tbody id="resultBody"></tbody>
+      </table>
+    </div>
+    <p class="disclaimer" id="nextNote"></p>
+    <p class="disclaimer">給与所得は令和8年分の給与所得控除（最低74万円）で計算しています。節税額は「控除額×所得税率×1.021（復興特別所得税）」で計算した所得税だけの目安で、住民税（翌年度）も別に安くなります。</p>
+    <div class="share-row" id="shareRow">
+      <a class="share-btn share-x" id="shareX" href="#" target="_blank" rel="noopener">𝕏でシェア</a>
+      <a class="share-btn share-line" id="shareLine" href="#" target="_blank" rel="noopener">LINEで送る</a>
+      <a class="share-btn share-fb" id="shareFb" href="#" target="_blank" rel="noopener">Facebookでシェア</a>
+      <a class="share-btn share-hatena" id="shareHatena" href="#" target="_blank" rel="noopener">はてブする</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>配偶者の年収別 控除額の早見表（令和8年分）</h2>
+    <p>配偶者が給与収入だけの場合の目安です。本人の年収は、区分Ⅰ（合計所得金額）がA・B・Cになる例として500万円・1,120万円・1,170万円（いずれも給与のみ）で計算しています。</p>
+    <div class="ref-table" style="overflow-x:auto">
+      <table>
+        <thead><tr><th>配偶者の年収</th><th>区分Ⅱ</th><th class="num">本人A（所得900万円以下）</th><th class="num">本人B（950万円以下）</th><th class="num">本人C（1,000万円以下）</th></tr></thead>
+        <tbody>
+          <tr><td>100万円</td><td>②</td><td class="num">380,000円</td><td class="num">260,000円</td><td class="num">130,000円</td></tr>
+          <tr><td>136万円</td><td>②</td><td class="num">380,000円</td><td class="num">260,000円</td><td class="num">130,000円</td></tr>
+          <tr><td>150万円</td><td>③</td><td class="num">380,000円</td><td class="num">260,000円</td><td class="num">130,000円</td></tr>
+          <tr><td>160万円</td><td>③</td><td class="num">380,000円</td><td class="num">260,000円</td><td class="num">130,000円</td></tr>
+          <tr><td>169万円</td><td>③</td><td class="num">380,000円</td><td class="num">260,000円</td><td class="num">130,000円</td></tr>
+          <tr><td>174万円</td><td>④</td><td class="num">360,000円</td><td class="num">240,000円</td><td class="num">120,000円</td></tr>
+          <tr><td>179万円</td><td>④</td><td class="num">310,000円</td><td class="num">210,000円</td><td class="num">110,000円</td></tr>
+          <tr><td>184万円</td><td>④</td><td class="num">260,000円</td><td class="num">180,000円</td><td class="num">90,000円</td></tr>
+          <tr><td>189万円</td><td>④</td><td class="num">210,000円</td><td class="num">140,000円</td><td class="num">70,000円</td></tr>
+          <tr><td>194万円</td><td>④</td><td class="num">160,000円</td><td class="num">110,000円</td><td class="num">60,000円</td></tr>
+          <tr><td>199万円</td><td>④</td><td class="num">110,000円</td><td class="num">80,000円</td><td class="num">40,000円</td></tr>
+          <tr><td>204万円</td><td>④</td><td class="num">60,000円</td><td class="num">40,000円</td><td class="num">20,000円</td></tr>
+          <tr><td>207万円</td><td>④</td><td class="num">30,000円</td><td class="num">20,000円</td><td class="num">10,000円</td></tr>
+          <tr><td>208万円</td><td>対象外</td><td class="num">0円</td><td class="num">0円</td><td class="num">0円</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="disclaimer">配偶者が70歳以上で区分Ⅱが①の場合は、配偶者控除が48万円（B: 32万円、C: 16万円）になります。区分Ⅱが②でも③でも、本人Aなら控除額は38万円で同じです。出典: <a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1195.htm" target="_blank" rel="noopener">国税庁 No.1195 配偶者特別控除</a>、<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1191.htm" target="_blank" rel="noopener">No.1191 配偶者控除</a></p>
+  </section>
+
+  <section>
+    <h2>計算例: 国税庁の記載例と同じ条件</h2>
+    <p>本人の給与収入897万円（23歳未満の扶養親族がいて所得金額調整控除あり）、配偶者の給与収入124万円の場合です。</p>
+    <div class="ref-table">
+      <table>
+        <tbody>
+          <tr><td>本人の合計所得金額（給与所得7,020,000円−所得金額調整控除47,000円）</td><td class="num">6,973,000円</td></tr>
+          <tr><td>区分Ⅰ（900万円以下）</td><td class="num">A</td></tr>
+          <tr><td>配偶者の合計所得金額（124万円−給与所得控除74万円）</td><td class="num">500,000円</td></tr>
+          <tr><td>区分Ⅱ（62万円以下・70歳未満）</td><td class="num">②</td></tr>
+          <tr class="total"><td>配偶者控除の額</td><td class="num">380,000円</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="disclaimer">国税庁の令和8年分の記載例と同じ結果になることを確認しています。</p>
+  </section>
+
+  <section>
+    <h2>配偶者控除等申告書の書き方（3ステップ）</h2>
+    <p><strong>1. 基礎控除申告書の欄で、あなたの合計所得金額を計算して区分Ⅰ（A〜C）を書く。</strong>給与所得は「年収−給与所得控除」です。合計所得金額が1,000万円を超える場合は、配偶者控除等申告書は出せません。</p>
+    <p><strong>2. 配偶者の合計所得金額を計算して区分Ⅱ（①〜④）を書く。</strong>配偶者の氏名・生年月日・住所なども書きます。配偶者の所得が133万円を超える場合は対象外です。</p>
+    <p><strong>3. 「控除額の計算」の表で控除額を求めて書く。</strong>区分Ⅱが①・②なら「配偶者控除の額」の欄に、③・④なら「配偶者特別控除の額」の欄に書きます。このツールの「申告書に書く内容」の表をそのまま写せます。</p>
+  </section>
+
+  <div class="pr-box">
+    <span class="pr-label">次のステップ</span>
+    <p class="pr-lede">年末調整では、配偶者控除等申告書と一緒に保険料控除申告書も出します。配偶者の働き方を考えている場合は、社会保険の扶養（130万円の壁）もあわせて確認しておきましょう。</p>
+    <div class="pr-banner">
+      <a href="https://webtools-labs.com/hokenryo-koujo-shinkokusho/" class="pr-cta">保険料控除申告書 計算ツール</a>
+      <a href="https://webtools-labs.com/fuyou-no-kabe-keisan/" class="pr-cta" style="margin-left:0.6rem;">扶養の壁チェッカー</a>
+      <a href="https://webtools-labs.com/nencho-kanpu-keisan/" class="pr-cta" style="margin-left:0.6rem;">年末調整 還付金シミュレーター</a>
+    </div>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-2370765779014113"
+      data-ad-slot="3021985784"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section>
+    <h2>よくある質問</h2>
+    <details class="faq-item">
+      <summary>配偶者控除と配偶者特別控除の違いは何ですか？</summary>
+      <p>配偶者の合計所得金額が62万円以下（給与収入だけなら年収136万円以下）なら「配偶者控除」、62万円超133万円以下（年収207万円以下）なら「配偶者特別控除」です。令和8年分は、配偶者控除の基準が48万円（年収123万円）から62万円（年収136万円）に引き上げられました。配偶者の年収が169万円以下なら、どちらでも控除額は最大の38万円です。</p>
+    </details>
+    <details class="faq-item">
+      <summary>区分Ⅰと区分Ⅱには何を書けばいいですか？</summary>
+      <p>区分Ⅰは「あなた（本人）」の合計所得金額の見積額で決まり、900万円以下ならA、950万円以下ならB、1,000万円以下ならCです（基礎控除申告書の欄に書きます）。区分Ⅱは「配偶者」の合計所得金額と年齢で決まり、62万円以下で70歳以上なら①、70歳未満なら②、62万円超95万円以下なら③、95万円超133万円以下なら④です。</p>
+    </details>
+    <details class="faq-item">
+      <summary>本人の年収がいくらを超えると受けられなくなりますか？</summary>
+      <p>本人の合計所得金額が1,000万円を超えると、配偶者控除も配偶者特別控除も受けられません。給与収入だけなら、年収およそ1,195万円が境目です（23歳未満の扶養親族がいるなど所得金額調整控除がある場合は少し高くなります）。</p>
+    </details>
+    <details class="faq-item">
+      <summary>配偶者の年収はいつの金額で判定しますか？</summary>
+      <p>その年（令和8年分なら2026年1〜12月）に受け取る給与の総額の見込みで判定します。年末調整の時点ではまだ確定していないため、12月分までの見込み額を書きます。見込みと実際の金額が違って区分が変わった場合は、年末調整のやり直しか確定申告で修正します。</p>
+    </details>
+    <details class="faq-item">
+      <summary>共働きでお互いに配偶者特別控除を受けられますか？</summary>
+      <p>受けられません。夫婦の双方が、お互いに配偶者特別控除を受けることはできません。どちらか一方だけが受けられます。</p>
+    </details>
+    <details class="faq-item">
+      <summary>社会保険の扶養（130万円の壁）とは関係ありますか？</summary>
+      <p>別の制度です。配偶者控除・配偶者特別控除は税金（所得税・住民税）の控除で、社会保険の扶養（健康保険・年金）は原則として年収130万円未満かどうかで判定されます。年収130万円を超えると社会保険料の負担が発生するため、税金の控除だけでなく社会保険の扶養もあわせて確認してください。</p>
+    </details>
+  </section>
+
+  <section class="contact-box">
+    <h2>ご意見・追加してほしい機能</h2>
+    <p class="lede" style="margin-bottom:0.9rem;">気づいたことや、あったら便利な機能があれば教えてください。</p>
+    <form id="contactForm">
+      <input type="email" id="contactEmail" placeholder="返信が必要な場合はメールアドレス（任意）">
+      <textarea id="contactMessage" placeholder="ご意見・ご要望をどうぞ" required></textarea>
+      <button type="submit" id="contactSubmit">送信する</button>
+      <p class="contact-status" id="contactStatus"></p>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <p>本ツールは令和8年分（2026年）の所得税の配偶者控除・配偶者特別控除と、年末調整の配偶者控除等申告書の記入を助けるための目安です。合計所得金額は給与所得と入力した「給与以外の所得」の合計で計算しています。実際の記入は、国税庁の様式・記載例と勤務先の案内に従ってください。</p>
+    <p>あわせて使える：
+      <a href="https://webtools-labs.com/frima-tesuryo-hikaku/">フリマ手数料計算・比較ツール</a> ／
+      <a href="https://webtools-labs.com/frima-hasso-hikaku/">フリマ配送方法・送料比較ツール</a> ／
+      <a href="https://webtools-labs.com/frima-tedori-simulator/">フリマ手取りシミュレーター</a> ／
+      <a href="https://webtools-labs.com/yukyu-hiyou-keisan/">有給休暇 付与日数計算ツール</a> ／
+      <a href="https://webtools-labs.com/revolving-risoku-keisan/">リボ払い・分割払い 実質利息計算ツール</a> ／
+      <a href="https://webtools-labs.com/taishoku-yukyu-keisan/">退職時の有給消化シミュレーター</a> ／
+      <a href="https://webtools-labs.com/fuyou-no-kabe-keisan/">扶養の壁チェッカー</a> ／
+      <a href="https://webtools-labs.com/tedori-keisan/">手取り計算ツール</a> ／
+      <a href="https://webtools-labs.com/taishokukin-zei-keisan/">退職金の税金計算ツール</a> ／
+      <a href="https://webtools-labs.com/taishokugo-hoken-hikaku-keisan/">退職後の健康保険 比較シミュレーター</a> ／
+      <a href="https://webtools-labs.com/sankyu-ikuji-teate-keisan/">産休・育休手当金シミュレーター</a> ／
+      <a href="https://webtools-labs.com/zangyodai-keisan/">残業代計算ツール</a> ／
+      <a href="https://webtools-labs.com/shitsugyo-hoken-keisan/">失業保険（基本手当）シミュレーター</a> ／
+      <a href="https://webtools-labs.com/jikyu-nenshu-keisan/">時給から年収・月収を計算</a> ／
+      <a href="https://webtools-labs.com/yubin-kitte-keisan/">郵便物の切手代早見表</a> ／
+      <a href="https://webtools-labs.com/bonus-tedori-keisan/">賞与手取り計算ツール</a> ／
+      <a href="https://webtools-labs.com/shoubyou-teate-keisan/">傷病手当金計算ツール</a> ／
+      <a href="https://webtools-labs.com/juminzei-keisan/">住民税計算ツール</a> ／
+      <a href="https://webtools-labs.com/tsukin-teate-keisan/">通勤手当の非課税限度額計算ツール</a> ／
+      <a href="https://webtools-labs.com/tedori-gyakusan-keisan/">手取りから逆算する年収計算ツール</a> ／
+      <a href="https://webtools-labs.com/shakaihoken-uchiwake-keisan/">給与の社会保険料 内訳計算ツール</a> ／
+      <a href="https://webtools-labs.com/fukugyo-shinkoku-keisan/">副業の確定申告 要否チェッカー</a> ／
+      <a href="https://webtools-labs.com/nencho-kanpu-keisan/">年末調整 還付金シミュレーター</a> ／
+      <a href="https://webtools-labs.com/iryouhi-koujo-keisan/">医療費控除 計算ツール</a> ／
+      <a href="https://webtools-labs.com/frima-kakuteishinkoku-checker/">フリマの確定申告 要否チェッカー</a> ／
+      <a href="https://webtools-labs.com/ideco-setsuzei-keisan/">iDeCo（確定拠出年金）節税シミュレーター</a> ／
+      <a href="https://webtools-labs.com/tokutei-shinzoku-keisan/">特定親族特別控除 計算ツール</a> ／
+      <a href="https://webtools-labs.com/taishokubi-hikaku-keisan/">退職日シミュレーター（月末退職と前日退職の比較）</a> ／
+      <a href="https://webtools-labs.com/seimei-hoken-koujo-keisan/">生命保険料控除 計算ツール</a> ／
+      <a href="https://webtools-labs.com/furusato-nozei-keisan/">ふるさと納税 上限額シミュレーター</a> ／
+      <a href="https://webtools-labs.com/hokenryo-koujo-shinkokusho/">保険料控除申告書 計算ツール</a> ／
+      <a href="https://webtools-labs.com/saitei-chingin-checker/">最低賃金チェッカー</a>
+    </p>
+    <p>当サイトは広告を掲載する場合があります。</p>
+    <p><a href="https://webtools-labs.com/about/">運営者情報</a> ／ <a href="https://webtools-labs.com/privacy/">プライバシーポリシー</a></p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  function yen(n) { return Math.round(n).toLocaleString('ja-JP') + '円'; }
+  var calcHaigusha = function calcHaigusha(v) {
+  function pos(x) { return Math.max(0, Math.floor(Number(x) || 0)); }
+  // 給与所得（令和8年分の給与所得控除。660万円未満は所得税法別表第五と同じく収入を4,000円単位に切り捨ててから計算）
+  function salaryIncome(s) {
+    if (s <= 740000) return 0;
+    if (s <= 2200000) return s - 740000;
+    var a = s < 6600000 ? Math.floor(s / 4000) * 4000 : s;
+    var ded;
+    if (a <= 3600000) ded = a * 0.3 + 80000;
+    else if (a <= 6600000) ded = a * 0.2 + 440000;
+    else if (a <= 8500000) ded = a * 0.1 + 1100000;
+    else ded = 1950000;
+    return Math.max(0, Math.floor(a - ded));
+  }
+  var selfSalary = pos(v.selfSalary), selfOther = pos(v.selfOther);
+  var selfSalaryIncome = salaryIncome(selfSalary);
+  // 所得金額調整控除（給与収入850万円超で、23歳未満の扶養親族がいる等の場合）
+  var adjust = v.adjust && selfSalary > 8500000 ? Math.ceil((Math.min(selfSalary, 10000000) - 8500000) * 0.1) : 0;
+  var selfTotal = Math.max(0, selfSalaryIncome - adjust) + selfOther;
+  var kubun1 = selfTotal <= 9000000 ? 'A' : selfTotal <= 9500000 ? 'B' : selfTotal <= 10000000 ? 'C' : null;
+
+  var spSalary = pos(v.spouseSalary), spOther = pos(v.spouseOther);
+  var spSalaryIncome = salaryIncome(spSalary);
+  var spTotal = spSalaryIncome + spOther;
+  var elderly = !!v.elderly;
+  var kubun2 = spTotal <= 620000 ? (elderly ? '①' : '②') : spTotal <= 950000 ? '③' : spTotal <= 1330000 ? '④' : null;
+
+  var col = kubun1 === 'A' ? 0 : kubun1 === 'B' ? 1 : 2;
+  var amount = 0, type = null;
+  if (kubun1 && kubun2) {
+    if (kubun2 === '①') { amount = [480000, 320000, 160000][col]; type = '配偶者控除'; }
+    else if (kubun2 === '②') { amount = [380000, 260000, 130000][col]; type = '配偶者控除'; }
+    else {
+      type = '配偶者特別控除';
+      var table = [
+        [950000, 380000, 260000, 130000], [1000000, 360000, 240000, 120000], [1050000, 310000, 210000, 110000],
+        [1100000, 260000, 180000, 90000], [1150000, 210000, 140000, 70000], [1200000, 160000, 110000, 60000],
+        [1250000, 110000, 80000, 40000], [1300000, 60000, 40000, 20000], [1330000, 30000, 20000, 10000]
+      ];
+      for (var i = 0; i < table.length; i++) { if (spTotal <= table[i][0]) { amount = table[i][col + 1]; break; } }
+    }
+  }
+  // 配偶者の合計所得の次の区切り（控除額が下がる境目）と、給与収入だけの場合の年収の目安
+  var bounds = [620000, 950000, 1000000, 1050000, 1100000, 1150000, 1200000, 1250000, 1300000, 1330000];
+  var nextBound = null;
+  for (var j = 0; j < bounds.length; j++) { if (spTotal <= bounds[j]) { nextBound = bounds[j]; break; } }
+  var nextSalary = nextBound !== null && spOther === 0 ? nextBound + 740000 : null;
+  return {
+    selfSalaryIncome: selfSalaryIncome, adjust: adjust, selfTotal: selfTotal, kubun1: kubun1,
+    spSalaryIncome: spSalaryIncome, spTotal: spTotal, kubun2: kubun2, elderly: elderly,
+    type: type, amount: amount, nextBound: nextBound, nextSalary: nextSalary
+  };
+};
+
+  var ids = ['selfSalary', 'selfOther', 'spouseSalary', 'spouseOther'];
+  var inputs = {};
+  ids.forEach(function (id) { inputs[id] = document.getElementById(id); });
+  var adjustInput = document.getElementById('adjust');
+  var elderlyInput = document.getElementById('elderly');
+  var taxRateInput = document.getElementById('taxRate');
+  var summaryCards = document.getElementById('summaryCards');
+  var resultBody = document.getElementById('resultBody');
+  var nextNote = document.getElementById('nextNote');
+  var shareX = document.getElementById('shareX');
+  var shareLine = document.getElementById('shareLine');
+  var shareFb = document.getElementById('shareFb');
+  var shareHatena = document.getElementById('shareHatena');
+
+  function setShareLinks(text, url) {
+    shareX.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+    shareLine.href = 'https://line.me/R/msg/text/?' + encodeURIComponent(text + '\n' + url);
+    shareFb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&quote=' + encodeURIComponent(text);
+    shareHatena.href = 'https://b.hatena.ne.jp/entry/panel/?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(text);
+  }
+  function row(sym, label, value) { return '<tr><td><span class="sym">' + sym + '</span></td><td>' + label + '</td><td class="num">' + value + '</td></tr>'; }
+  function section(label) { return '<tr class="form-section"><td colspan="3">' + label + '</td></tr>'; }
+
+  function render() {
+    var v = {};
+    ids.forEach(function (id) { v[id] = inputs[id].value; });
+    v.adjust = adjustInput.checked;
+    v.elderly = elderlyInput.checked;
+    var r = calcHaigusha(v);
+    var rate = Number(taxRateInput.value);
+    var save = r.amount * rate * 1.021;
+    var status = !r.kubun1 ? 'あなたの合計所得金額が1,000万円を超えるため対象外' : !r.kubun2 ? '配偶者の合計所得金額が133万円を超えるため対象外' : r.type;
+
+    summaryCards.innerHTML =
+      '<div class="summary-card"><div class="label">' + (r.type || '控除') + 'の額</div><div class="value">' + yen(r.amount) + '</div><div class="sub">' + status + '</div></div>' +
+      '<div class="summary-card"><div class="label">区分Ⅰ ／ 区分Ⅱ</div><div class="value">' + (r.kubun1 || '−') + ' ／ ' + (r.kubun2 || '−') + '</div><div class="sub">本人の所得 ' + yen(r.selfTotal) + '・配偶者の所得 ' + yen(r.spTotal) + '</div></div>' +
+      '<div class="summary-card"><div class="label">所得税が安くなる目安</div><div class="value">約' + yen(save) + '</div><div class="sub">住民税も翌年度に別に安くなります</div></div>';
+
+    var html = section('基礎控除申告書（あなたの欄）');
+    html += row('', '給与所得（年収−給与所得控除）', yen(r.selfSalaryIncome));
+    if (r.adjust > 0) html += row('', '所得金額調整控除', '−' + yen(r.adjust));
+    html += row('', 'あなたの本年中の合計所得金額の見積額', yen(r.selfTotal));
+    html += row('区分Ⅰ', '900万円以下はA、950万円以下はB、1,000万円以下はC', r.kubun1 || '対象外');
+    html += section('配偶者控除等申告書');
+    html += row('', '配偶者の給与所得', yen(r.spSalaryIncome));
+    html += row('', '配偶者の本年中の合計所得金額の見積額', yen(r.spTotal));
+    html += row('区分Ⅱ', '62万円以下で70歳以上は①・70歳未満は②、95万円以下は③、133万円以下は④', r.kubun2 || '対象外');
+    if (r.type === '配偶者控除') html += '<tr class="total"><td></td><td>配偶者控除の額</td><td class="num">' + yen(r.amount) + '</td></tr>';
+    else if (r.type === '配偶者特別控除') html += '<tr class="total"><td></td><td>配偶者特別控除の額</td><td class="num">' + yen(r.amount) + '</td></tr>';
+    else html += '<tr class="total"><td></td><td>' + status + '</td><td class="num">0円</td></tr>';
+    resultBody.innerHTML = html;
+
+    if (r.kubun1 && r.kubun2 && r.nextSalary) {
+      nextNote.textContent = '配偶者の年収（給与のみ）が ' + yen(r.nextSalary) + ' を超えると、区分または控除額が変わります（あと ' + yen(Math.max(0, r.nextSalary - Number(v.spouseSalary || 0))) + '）。';
+    } else { nextNote.textContent = ''; }
+
+    setShareLinks('配偶者控除を計算したら、' + (r.type || '控除') + 'は' + yen(r.amount) + '（区分Ⅰ' + (r.kubun1 || '−') + '・区分Ⅱ' + (r.kubun2 || '−') + '）でした\n\n配偶者控除・配偶者特別控除 計算ツール', 'https://webtools-labs.com/haigusha-koujo-keisan/');
+  }
+
+  ids.forEach(function (id) { inputs[id].addEventListener('input', render); });
+  adjustInput.addEventListener('change', render);
+  elderlyInput.addEventListener('change', render);
+  taxRateInput.addEventListener('change', render);
+  render();
+
+  var WEB3FORMS_ACCESS_KEY = '4551c9fd-4327-4bd4-97e0-8b93d85fd077';
+  var contactForm = document.getElementById('contactForm');
+  var contactStatus = document.getElementById('contactStatus');
+  var contactSubmit = document.getElementById('contactSubmit');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    contactSubmit.disabled = true;
+    contactStatus.textContent = '送信中...';
+    contactStatus.className = 'contact-status';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: '配偶者控除 計算ツールへのお問い合わせ',
+        email: document.getElementById('contactEmail').value || 'noreply@example.com',
+        message: document.getElementById('contactMessage').value
+      })
+    }).then(function (res) { return res.json(); }).then(function (data) {
+      contactSubmit.disabled = false;
+      if (data.success) {
+        contactStatus.textContent = '送信しました。ありがとうございます！';
+        contactStatus.className = 'contact-status ok';
+        contactForm.reset();
+      } else {
+        contactStatus.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+        contactStatus.className = 'contact-status err';
+      }
+    }).catch(function () {
+      contactSubmit.disabled = false;
+      contactStatus.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+      contactStatus.className = 'contact-status err';
+    });
+  });
+})();
+</script>
+</body>
+</html>
