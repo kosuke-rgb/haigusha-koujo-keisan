@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>配偶者控除・配偶者特別控除 計算ツール【令和8年分】年収から控除額と申告書の区分が分かる</title>
-<meta name="description" content="夫・妻それぞれの年収を入れるだけで、令和8年分の配偶者控除・配偶者特別控除の額と、年末調整の配偶者控除等申告書に書く区分Ⅰ（A〜C）・区分Ⅱ（①〜④）が分かる無料ツール。配偶者の年収136万円・169万円・207万円の新しい基準に対応。">
+<meta name="description" content="夫・妻それぞれの年収を入れるだけで、令和8年分の配偶者控除・配偶者特別控除の額と、年末調整の配偶者控除等申告書に書く区分Ⅰ（A〜C）・区分Ⅱ（①〜④）が分かる無料ツール。配偶者の年収136万円・169万円・207万円の新しい基準に対応。配偶者控除で安くなる税金の目安（税率別）も掲載。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://webtools-labs.com/haigusha-koujo-keisan/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2370765779014113" crossorigin="anonymous"></script>
@@ -113,6 +113,16 @@
       "@type": "Question",
       "name": "配偶者が年金をもらっている場合はどう判定しますか？",
       "acceptedAnswer": { "@type": "Answer", "text": "年金の場合は、年金の受取額から公的年金等控除を引いた「所得」で判定します。給与と年金の両方がある場合は、給与所得と年金の所得を合計します。本ツールは給与収入で計算しているため、年金がある場合は、配偶者の合計所得金額が62万円以下なら配偶者控除、62万円超133万円以下なら配偶者特別控除の対象、を目安にしてください（令和8年分）。" }
+    },
+    {
+      "@type": "Question",
+      "name": "配偶者控除を受けると、税金はいくら安くなりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "本人の所得税率が10%の場合、所得税が約3.9万円（配偶者控除38万円×10.21%）、住民税が3.3万円（住民税の配偶者控除33万円×10%）安くなり、合計で年約7.2万円が目安です。所得税率が5%なら合計約5.2万円、20%なら約11.1万円になります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "配偶者控除等申告書を年末調整で出し忘れたらどうなりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "その年の年末調整では配偶者控除が反映されませんが、自分で確定申告（還付申告）をすれば控除を受けられます。還付申告は翌年1月1日から5年以内なら提出できます。会社によっては、翌年1月ごろまで年末調整のやり直しに対応してもらえることもあります。" }
     }
   ]
 }
@@ -308,7 +318,7 @@ footer.site-footer a { color: var(--accent); }
   <header class="masthead">
     <h1>配偶者控除・配偶者特別控除 計算ツール【令和8年分】</h1>
     <p class="lede">あなたと配偶者の年収（給与の見込み額）を入れるだけで、配偶者控除・配偶者特別控除の額と、年末調整で出す「配偶者控除等申告書」に書く区分Ⅰ（A〜C）・区分Ⅱ（①〜④）が分かります。</p>
-    <span class="updated-note">制度 最終確認日: 2026年10月8日（国税庁タックスアンサーNo.1191・No.1195〔令和8年4月1日現在法令等〕、令和8年分の申告書記載例にもとづく）</span>
+    <span class="updated-note">制度 最終確認日: 2026年11月9日（国税庁タックスアンサーNo.1191・No.1195〔令和8年4月1日現在法令等〕、令和8年分の申告書記載例にもとづく）</span>
     <p class="ad-disclosure" style="font-size:0.75rem;opacity:0.7;margin:0.5rem 0 0;">※当サイトはアフィリエイト広告（PR）を利用しています。</p>
   </header>
 
@@ -400,6 +410,22 @@ footer.site-footer a { color: var(--accent); }
       </table>
     </div>
     <p class="disclaimer">配偶者が70歳以上で区分Ⅱが①の場合は、配偶者控除が48万円（B: 32万円、C: 16万円）になります。区分Ⅱが②でも③でも、本人Aなら控除額は38万円で同じです。出典: <a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1195.htm" target="_blank" rel="noopener">国税庁 No.1195 配偶者特別控除</a>、<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1191.htm" target="_blank" rel="noopener">No.1191 配偶者控除</a></p>
+  </section>
+
+  <section id="setsuzei">
+    <h2>配偶者控除で税金はいくら安くなる？（本人の所得税率別）</h2>
+    <p>配偶者控除（控除額38万円）を受けたときに、所得税と住民税がいくら安くなるかの目安です。所得税率は、本人の課税所得（収入から各種控除を引いた額）で決まります。</p>
+    <div class="ref-table" style="overflow-x:auto">
+      <table>
+        <thead><tr><th>本人の所得税率（課税所得）</th><th>所得税が安くなる額</th><th>住民税が安くなる額</th><th>合計</th></tr></thead>
+        <tbody>
+          <tr><td>5%（195万円以下）</td><td>約19,400円</td><td>33,000円</td><td>約52,400円</td></tr>
+          <tr><td>10%（195万円超〜330万円以下）</td><td>約38,800円</td><td>33,000円</td><td>約71,800円</td></tr>
+          <tr><td>20%（330万円超〜695万円以下）</td><td>約77,600円</td><td>33,000円</td><td>約110,600円</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="disclaimer">所得税は復興特別所得税（2.1%）を含みます。住民税の配偶者控除は33万円で、税率10%として計算しています。所得税の分は年末調整で、住民税の分は翌年6月からの住民税で安くなります。配偶者特別控除の場合は、控除額（上の早見表）に同じ税率を掛けて計算できます。</p>
   </section>
 
   <section>
@@ -523,6 +549,14 @@ footer.site-footer a { color: var(--accent); }
     <details class="faq-item">
       <summary>配偶者が年金をもらっている場合はどう判定しますか？</summary>
       <p>年金の場合は、年金の受取額から公的年金等控除を引いた「所得」で判定します。給与と年金の両方がある場合は、給与所得と年金の所得を合計します。本ツールは給与収入で計算しているため、年金がある場合は、配偶者の合計所得金額が62万円以下なら配偶者控除、62万円超133万円以下なら配偶者特別控除の対象、を目安にしてください（令和8年分）。</p>
+    </details>
+    <details class="faq-item">
+      <summary>配偶者控除を受けると、税金はいくら安くなりますか？</summary>
+      <p>本人の所得税率が10%の場合、所得税が約3.9万円（配偶者控除38万円×10.21%）、住民税が3.3万円（住民税の配偶者控除33万円×10%）安くなり、合計で年約7.2万円が目安です。所得税率が5%なら合計約5.2万円、20%なら約11.1万円になります。</p>
+    </details>
+    <details class="faq-item">
+      <summary>配偶者控除等申告書を年末調整で出し忘れたらどうなりますか？</summary>
+      <p>その年の年末調整では配偶者控除が反映されませんが、自分で確定申告（還付申告）をすれば控除を受けられます。還付申告は翌年1月1日から5年以内なら提出できます。会社によっては、翌年1月ごろまで年末調整のやり直しに対応してもらえることもあります。</p>
     </details>
   </section>
 
