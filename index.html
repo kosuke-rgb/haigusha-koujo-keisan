@@ -221,7 +221,7 @@ tr.total td { font-weight: 700; }
 tr.total { background: var(--best-bg); }
 
 .ref-table { overflow-x: auto; }
-.ref-table table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 460px; }
+.ref-table table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 0; }
 .ref-table th, .ref-table td { padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--line); text-align: left; }
 .ref-table td.num { font-variant-numeric: tabular-nums; text-align: right; }
 .ref-table tr.highlight td { background: var(--best-bg); font-weight: 700; }
@@ -310,6 +310,15 @@ footer.site-footer a { color: var(--accent); }
 .related-tools a { color: var(--accent); font-weight: 700; text-decoration: none; }
 .related-tools a:hover { text-decoration: underline; }
 .related-tools li p { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.85rem; }
+/* スマホで表が画面からはみ出さないように（2026-11-17） */
+@media (max-width: 600px) {
+  .ref-table table { font-size: 0.8rem; }
+  .ref-table th, .ref-table td { padding: 0.45rem 0.3rem; }
+  .ref-table th, .ref-table td:first-child { white-space: normal; }
+  .ref-table td.nw { white-space: nowrap; }
+  .ref-table th:first-child, .ref-table td:first-child { min-width: 5em; position: sticky; left: 0; z-index: 1; background: var(--bg); box-shadow: 1px 0 0 var(--line); }
+  .ref-table tr.best td:first-child, .ref-table tr.total td:first-child, .ref-table tr.next td:first-child, .ref-table tr.highlight td:first-child { background: var(--best-bg, var(--bg)); }
+}
 </style>
 </head>
 <body>
@@ -392,20 +401,20 @@ footer.site-footer a { color: var(--accent); }
       <table>
         <thead><tr><th>配偶者の年収</th><th>区分Ⅱ</th><th class="num">本人A（所得900万円以下）</th><th class="num">本人B（950万円以下）</th><th class="num">本人C（1,000万円以下）</th></tr></thead>
         <tbody>
-          <tr><td>100万円</td><td>②</td><td class="num">380,000円</td><td class="num">260,000円</td><td class="num">130,000円</td></tr>
-          <tr><td>136万円</td><td>②</td><td class="num">380,000円</td><td class="num">260,000円</td><td class="num">130,000円</td></tr>
-          <tr><td>150万円</td><td>③</td><td class="num">380,000円</td><td class="num">260,000円</td><td class="num">130,000円</td></tr>
-          <tr><td>160万円</td><td>③</td><td class="num">380,000円</td><td class="num">260,000円</td><td class="num">130,000円</td></tr>
-          <tr><td>169万円</td><td>③</td><td class="num">380,000円</td><td class="num">260,000円</td><td class="num">130,000円</td></tr>
-          <tr><td>174万円</td><td>④</td><td class="num">360,000円</td><td class="num">240,000円</td><td class="num">120,000円</td></tr>
-          <tr><td>179万円</td><td>④</td><td class="num">310,000円</td><td class="num">210,000円</td><td class="num">110,000円</td></tr>
-          <tr><td>184万円</td><td>④</td><td class="num">260,000円</td><td class="num">180,000円</td><td class="num">90,000円</td></tr>
-          <tr><td>189万円</td><td>④</td><td class="num">210,000円</td><td class="num">140,000円</td><td class="num">70,000円</td></tr>
-          <tr><td>194万円</td><td>④</td><td class="num">160,000円</td><td class="num">110,000円</td><td class="num">60,000円</td></tr>
-          <tr><td>199万円</td><td>④</td><td class="num">110,000円</td><td class="num">80,000円</td><td class="num">40,000円</td></tr>
-          <tr><td>204万円</td><td>④</td><td class="num">60,000円</td><td class="num">40,000円</td><td class="num">20,000円</td></tr>
-          <tr><td>207万円</td><td>④</td><td class="num">30,000円</td><td class="num">20,000円</td><td class="num">10,000円</td></tr>
-          <tr><td>208万円</td><td>対象外</td><td class="num">0円</td><td class="num">0円</td><td class="num">0円</td></tr>
+          <tr><td>100万円</td><td>②</td><td class="num nw">380,000円</td><td class="num nw">260,000円</td><td class="num nw">130,000円</td></tr>
+          <tr><td>136万円</td><td>②</td><td class="num nw">380,000円</td><td class="num nw">260,000円</td><td class="num nw">130,000円</td></tr>
+          <tr><td>150万円</td><td>③</td><td class="num nw">380,000円</td><td class="num nw">260,000円</td><td class="num nw">130,000円</td></tr>
+          <tr><td>160万円</td><td>③</td><td class="num nw">380,000円</td><td class="num nw">260,000円</td><td class="num nw">130,000円</td></tr>
+          <tr><td>169万円</td><td>③</td><td class="num nw">380,000円</td><td class="num nw">260,000円</td><td class="num nw">130,000円</td></tr>
+          <tr><td>174万円</td><td>④</td><td class="num nw">360,000円</td><td class="num nw">240,000円</td><td class="num nw">120,000円</td></tr>
+          <tr><td>179万円</td><td>④</td><td class="num nw">310,000円</td><td class="num nw">210,000円</td><td class="num nw">110,000円</td></tr>
+          <tr><td>184万円</td><td>④</td><td class="num nw">260,000円</td><td class="num nw">180,000円</td><td class="num nw">90,000円</td></tr>
+          <tr><td>189万円</td><td>④</td><td class="num nw">210,000円</td><td class="num nw">140,000円</td><td class="num nw">70,000円</td></tr>
+          <tr><td>194万円</td><td>④</td><td class="num nw">160,000円</td><td class="num nw">110,000円</td><td class="num nw">60,000円</td></tr>
+          <tr><td>199万円</td><td>④</td><td class="num nw">110,000円</td><td class="num nw">80,000円</td><td class="num nw">40,000円</td></tr>
+          <tr><td>204万円</td><td>④</td><td class="num nw">60,000円</td><td class="num nw">40,000円</td><td class="num nw">20,000円</td></tr>
+          <tr><td>207万円</td><td>④</td><td class="num nw">30,000円</td><td class="num nw">20,000円</td><td class="num nw">10,000円</td></tr>
+          <tr><td>208万円</td><td>対象外</td><td class="num nw">0円</td><td class="num nw">0円</td><td class="num nw">0円</td></tr>
         </tbody>
       </table>
     </div>
@@ -419,9 +428,9 @@ footer.site-footer a { color: var(--accent); }
       <table>
         <thead><tr><th>本人の所得税率（課税所得）</th><th>所得税が安くなる額</th><th>住民税が安くなる額</th><th>合計</th></tr></thead>
         <tbody>
-          <tr><td>5%（195万円以下）</td><td>約19,400円</td><td>33,000円</td><td>約52,400円</td></tr>
-          <tr><td>10%（195万円超〜330万円以下）</td><td>約38,800円</td><td>33,000円</td><td>約71,800円</td></tr>
-          <tr><td>20%（330万円超〜695万円以下）</td><td>約77,600円</td><td>33,000円</td><td>約110,600円</td></tr>
+          <tr><td>5%（195万円以下）</td><td class="num nw">約19,400円</td><td class="num nw">33,000円</td><td class="num nw">約52,400円</td></tr>
+          <tr><td>10%（195万円超〜330万円以下）</td><td class="num nw">約38,800円</td><td class="num nw">33,000円</td><td class="num nw">約71,800円</td></tr>
+          <tr><td>20%（330万円超〜695万円以下）</td><td class="num nw">約77,600円</td><td class="num nw">33,000円</td><td class="num nw">約110,600円</td></tr>
         </tbody>
       </table>
     </div>
@@ -434,11 +443,11 @@ footer.site-footer a { color: var(--accent); }
     <div class="ref-table">
       <table>
         <tbody>
-          <tr><td>本人の合計所得金額（給与所得7,020,000円−所得金額調整控除47,000円）</td><td class="num">6,973,000円</td></tr>
+          <tr><td>本人の合計所得金額（給与所得7,020,000円−所得金額調整控除47,000円）</td><td class="num nw">6,973,000円</td></tr>
           <tr><td>区分Ⅰ（900万円以下）</td><td class="num">A</td></tr>
-          <tr><td>配偶者の合計所得金額（124万円−給与所得控除74万円）</td><td class="num">500,000円</td></tr>
+          <tr><td>配偶者の合計所得金額（124万円−給与所得控除74万円）</td><td class="num nw">500,000円</td></tr>
           <tr><td>区分Ⅱ（62万円以下・70歳未満）</td><td class="num">②</td></tr>
-          <tr class="total"><td>配偶者控除の額</td><td class="num">380,000円</td></tr>
+          <tr class="total"><td>配偶者控除の額</td><td class="num nw">380,000円</td></tr>
         </tbody>
       </table>
     </div>
